@@ -1,0 +1,45 @@
+; blatt 1 aufgabe 1
+
+(define x
+  (- (/ (+ 9 6) (* 5 (- 3 1))) (* 4 (- (/ 7 8) 2))))
+
+x
+
+; blatt 1  aufgabe 2
+(define (g u v w)
+  (+ (/ (- v (* 7 u)) (- u w)) (/ (+ u v) (- (* 6 w) v))))
+
+(g 1 2 3)
+(g 3 11 2)
+
+; blatt 1 aufgabe 3
+
+(define (my-max x y)
+  (cond [(> x y) x]
+        [(= x y) x]
+        (else y)))
+(my-max 1 3)
+  ; blatt 1 aufgabe 4
+
+(define (groesser-zehn x)
+  (> x 10))
+(groesser-zehn 9)
+
+;blatt 1 aufgabe 5
+
+(define (groesserp x y z)
+  (> (+ x y) z))
+
+(groesserp 4 5 6)
+(groesserp 2 12 10)
+
+;blatt 1 aufgabe 6
+
+(define (s x) (* x x)) 
+(define (squared-max x y z)
+(cond [(> (s x) (and (s y) (s z))) (s x)]
+      [(> (s z) (and (s y) (s x))) (s z)]
+      (else (s  y))))
+
+  (squared-max 2 4 5)
+
