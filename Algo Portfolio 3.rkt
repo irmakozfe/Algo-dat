@@ -37,6 +37,15 @@
             (iter (cdr liste) praedikat sort (append  rest (list (car liste)))))))
   (iter liste praedikat '() '()))
 
+;alternative 
+(define (sort liste praedikat)
+  (group-by praedikat liste))
+
+(define (sortieren liste praedikat)
+ (flatten (sort liste praedikat)) )
+(sortieren '(1 2 3 4 5 6 7 8 9) odd?)
+
+
 (sortieren '(1 2 3 4 5 6 7 8 9) odd?)
 
 
